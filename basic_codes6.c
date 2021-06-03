@@ -13,6 +13,9 @@ int main()
 
     /* call swapfun2-> uses temporary varible to swap 2 nos good when instructions cycles are to be less*/
     swapfun2(a,b);
+    
+    /* call swapfun3-> uses bitwise operators to swap*/
+    swapfun3(a,b);
     return 0;
 }
 
@@ -40,4 +43,15 @@ int swapfun2(int num4, int num5)
     printf("\n swapped nos by method2 are = %u and %u", g, h);
     return 0;
     
+}
+int swapfun3(int num6, int num7)
+{
+    unsigned int i, j;
+    i = num6;
+    j = num7;
+    i = i ^ j;
+    j = i ^ j;
+    i = i ^ j;
+    printf("\n swapped nos by method3 are = %u and %u", i, j);
+    return 0;
 }
